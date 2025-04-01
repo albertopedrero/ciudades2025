@@ -6,7 +6,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
 var corsOptions = { 
-    origin: 'http://api.openweathermap.org/',
+    origin: 'http://api.openweathermap.org/*',
     optionsSuccessStatus: 200
 }
 // Middlewares
