@@ -18,7 +18,7 @@ class CiudadesService{
     }
     async addCiudad(ciudad){
         try {
-                const resultado = await this.mongoDB.addCiudades(this.coleccion, ciudad) // invocar en la 3º capa la inserción
+                const resultado = await this.mongoDB.addCiudades(this.coleccion, ciudad) 
             return resultado
         } catch(error){
 

@@ -28,7 +28,6 @@ function ciudadesAPI(app){
             console.log('ola')
             const {nombre, coordenadas} = req.body
             const nuevaCiudad = { nombre, coordenadas}
-            console.log(`recibida solicitud ${nombre}, ${{coordenadas}}`)
             ciudadAnadida = await ciudadesService.addCiudad(nuevaCiudad)
             res.status(200).json(
                 {
@@ -53,7 +52,6 @@ function ciudadesAPI(app){
     router.delete('/:idCiudad', async function (req, res, next){
         try{
             let idCiudad = req.params.idCiudad
-            console.log('quiero borrar ' + idCiudad)
             resultado = await ciudadesService.delCiudad(idCiudad)
             res.status(200).json(
                 { data: resultado, message: resultado}
